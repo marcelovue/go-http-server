@@ -11,7 +11,7 @@ import (
 func main() {
 	// http.HandleFunc("/", indexRoute)
 	currDir, _ := os.Getwd()
-	http.ErrNoLocation(indexRoute)
+	http.ErrNoLocation
 	http.Handle("/", http.FileServer(http.Dir(currDir)))
 	http.ListenAndServe(":1234", nil)
 }
